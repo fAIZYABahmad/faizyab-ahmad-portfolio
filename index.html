@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Faizyab Ahmad – Procurement Executive | SAP MM Specialist | E-commerce Consultant | Graphic Designer | Frontend Developer"/>
+<meta name="keywords" content="Faizyab Ahmad, SAP MM, Procurement Executive, E-commerce Consultant, Graphic Designer, Web Developer, Islamabad Pakistan"/>
+<title>Faizyab Ahmad | Procurement Executive & Creative Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+/* ========================================
+   VARIABLES
+======================================== */
+:root{
+  --navy:#050d1f;
+  --navy2:#091428;
+  --navy3:#0d1e3a;
+  --blue:#1a6fff;
+  --blue-l:#4d8fff;
+  --cyan:#00c4ff;
+  --accent:#ffd166;
+  --white:#f0f6ff;
+  --muted:#8899bb;
+  --border:rgba(100,160,255,0.12);
+  --card-bg:rgba(9,20,40,0.85);
+  --radius:1rem;
+  --shadow:0 25px 60px rgba(0,0,40,0.5);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--navy);
+  color:var(--white);
+  overflow-x:hidden;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+img{display:block;max-width:100%}
+.cm-card img, .pf-card img{max-width:none}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:10px}
+
+/* ========================================
+   NOISE TEXTURE OVERLAY
+======================================== */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  opacity:0.4;pointer-events:none;z-index:0;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 5%;
+  background:rgba(5,13,31,0.8);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:padding 0.3s;
+}
+nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.45rem;font-weight:800;
+  background:linear-gradient(135deg,#fff,var(--blue-l));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:-0.01em;
+}
+.nav-links{display:flex;gap:0.3rem;list-style:none}
+.nav-links a{
+  font-size:0.82rem;font-weight:500;
+  color:var(--muted);
+  padding:0.45rem 0.9rem;border-radius:100px;
+  transition:color 0.25s,background 0.25s;
+  letter-spacing:0.02em;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(26,111,255,0.15)}
+.nav-hire{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff;border:none;
+  padding:0.55rem 1.4rem;border-radius:100px;
+  font-size:0.82rem;font-weight:600;
+  letter-spacing:0.03em;
+  transition:transform 0.3s,box-shadow 0.3s;
+  box-shadow:0 4px 20px rgba(26,111,255,0.35);
+}
+.nav-hire:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,111,255,0.5)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:0.3s}
+.mobile-menu{
+  display:none;position:fixed;
+  top:64px;left:0;right:0;
+  background:rgba(5,13,31,0.97);
+  backdrop-filter:blur(20px);
+  padding:1.5rem 5%;z-index:999;
+  border-bottom:1px solid var(--border);
+}
+.mobile-menu.open{display:block}
+.mobile-menu a{
+  display:block;padding:0.75rem 0;
+  color:var(--muted);font-size:0.95rem;font-weight:500;
+  border-bottom:1px solid var(--border);
+  transition:color 0.2s;
+}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--white)}
+
+/* ========================================
+   HERO
+======================================== */
+#home{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:100px 5% 60px;
+  position:relative;
+  overflow:hidden;
+}
+/* animated mesh background */
+.hero-mesh{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 55% 65% at 75% 50%,rgba(26,111,255,0.18) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 40% at 20% 80%,rgba(0,196,255,0.1) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 50% at 80% 10%,rgba(255,209,102,0.06) 0%,transparent 60%),
+    linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);
+  z-index:-1;
+}
+/* floating orbs */
+.orb{
+  position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:-1;
+  animation:float 8s ease-in-out infinite;
+}
+.orb-1{width:400px;height:400px;background:rgba(26,111,255,0.12);top:-100px;right:10%;animation-delay:0s}
+.orb-2{width:300px;height:300px;background:rgba(0,196,255,0.08);bottom:10%;left:5%;animation-delay:3s}
+.orb-3{width:200px;height:200px;background:rgba(255,209,102,0.07);top:30%;right:35%;animation-delay:5s}
+@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+
+.hero-inner{
+  display:grid;grid-template-columns:1fr auto;
+  gap:4rem;align-items:center;max-width:1200px;margin:0 auto;width:100%;
+}
+.hero-left{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(26,111,255,0.12);
+  border:1px solid rgba(26,111,255,0.3);
+  color:var(--blue-l);
+  font-size:0.75rem;font-weight:600;letter-spacing:0.12em;
+  text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;
+  margin-bottom:1.5rem;
+  animation:fadeUp 0.8s 0.1s both;
+}
+.badge-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,6vw,5.2rem);
+  font-weight:800;line-height:1.08;
+  letter-spacing:-0.025em;
+  margin-bottom:1rem;
+  animation:fadeUp 0.8s 0.2s both;
+}
+.hero-title span{
+  background:linear-gradient(135deg,var(--blue-l),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:1.05rem;color:var(--muted);font-weight:400;
+  max-width:520px;margin-bottom:0.5rem;
+  animation:fadeUp 0.8s 0.3s both;
+}
+.hero-roles{
+  display:flex;flex-wrap:wrap;gap:0.5rem;
+  margin-bottom:2.2rem;
+  animation:fadeUp 0.8s 0.35s both;
+}
+.role-chip{
+  background:rgba(26,111,255,0.1);
+  border:1px solid rgba(26,111,255,0.22);
+  color:var(--blue-l);
+  font-size:0.75rem;font-weight:600;
+  padding:0.3rem 0.85rem;border-radius:100px;
+  letter-spacing:0.04em;
+}
+.hero-btns{
+  display:flex;gap:1rem;flex-wrap:wrap;
+  margin-bottom:3rem;
+  animation:fadeUp 0.8s 0.45s both;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff;border:none;
+  padding:0.85rem 2rem;border-radius:100px;
+  font-size:0.9rem;font-weight:600;
+  box-shadow:0 8px 25px rgba(26,111,255,0.38);
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(26,111,255,0.5)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:transparent;
+  border:1px solid rgba(100,160,255,0.3);
+  color:var(--white);
+  padding:0.85rem 2rem;border-radius:100px;
+  font-size:0.9rem;font-weight:600;
+  transition:border-color 0.3s,background 0.3s,transform 0.3s;
+}
+.btn-outline:hover{border-color:var(--blue-l);background:rgba(26,111,255,0.08);transform:translateY(-3px)}
+.hero-stats{
+  display:flex;gap:2.5rem;flex-wrap:wrap;
+  animation:fadeUp 0.8s 0.55s both;
+}
+.h-stat-n{
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;font-weight:800;
+  background:linear-gradient(135deg,var(--white),var(--blue-l));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;margin-bottom:0.2rem;
+}
+.h-stat-l{font-size:0.75rem;color:var(--muted);font-weight:500;letter-spacing:0.04em}
+
+/* profile image card */
+.hero-img-wrap{
+  position:relative;flex-shrink:0;
+  animation:fadeUp 0.9s 0.3s both;
+}
+.hero-img-ring{
+  width:300px;height:340px;
+  border-radius:40% 60% 55% 45% / 50% 45% 55% 50%;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  padding:3px;
+  animation:morphRing 8s ease-in-out infinite;
+  box-shadow:0 0 60px rgba(26,111,255,0.3);
+}
+@keyframes morphRing{
+  0%,100%{border-radius:40% 60% 55% 45% / 50% 45% 55% 50%}
+  33%{border-radius:55% 45% 40% 60% / 45% 60% 40% 55%}
+  66%{border-radius:45% 55% 60% 40% / 60% 40% 55% 45%}
+}
+.hero-img-inner{
+  width:100%;height:100%;
+  border-radius:inherit;
+  overflow:hidden;
+  background:var(--navy3);
+}
+.hero-img-inner img{width:100%;height:100%;object-fit:cover;object-position:top center}
+/* floating tag cards */
+.hero-float{
+  position:absolute;
+  background:rgba(9,20,40,0.92);
+  backdrop-filter:blur(16px);
+  border:1px solid var(--border);
+  border-radius:0.9rem;
+  padding:0.7rem 1.1rem;
+  display:flex;align-items:center;gap:0.6rem;
+  box-shadow:var(--shadow);
+  animation:floatCard 5s ease-in-out infinite;
+}
+.hero-float.f1{top:10%;right:-30px;animation-delay:0s}
+.hero-float.f2{bottom:18%;left:-30px;animation-delay:2.5s}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.float-ico{
+  width:36px;height:36px;border-radius:0.6rem;
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+}
+.float-ico.blue{background:rgba(26,111,255,0.2)}
+.float-ico.gold{background:rgba(255,209,102,0.15)}
+.float-title{font-size:0.75rem;font-weight:700;color:var(--white)}
+.float-sub{font-size:0.65rem;color:var(--muted)}
+/* scroll hint */
+.scroll-hint{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:0.4rem;
+  font-size:0.68rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;
+  animation:fadeUp 1s 1.2s both;
+}
+.scroll-mouse{
+  width:22px;height:34px;
+  border:2px solid rgba(100,160,255,0.3);
+  border-radius:100px;
+  display:flex;justify-content:center;padding-top:6px;
+}
+.scroll-wheel{width:3px;height:6px;background:var(--blue-l);border-radius:100px;animation:scrollDown 2s infinite}
+@keyframes scrollDown{0%{transform:translateY(0);opacity:1}100%{transform:translateY(10px);opacity:0}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* ========================================
+   SECTION SHARED
+======================================== */
+section{position:relative;z-index:1}
+.container{max-width:1200px;margin:0 auto;padding:0 5%}
+.section-pad{padding:100px 0}
+.sec-tag{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  font-size:0.72rem;font-weight:700;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--blue-l);
+  margin-bottom:1rem;
+}
+.sec-tag::before,.sec-tag::after{content:'';flex-shrink:0}
+.sec-tag::before{width:24px;height:2px;background:var(--blue);border-radius:2px}
+.sec-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:800;line-height:1.12;
+  letter-spacing:-0.025em;
+  margin-bottom:0.8rem;
+}
+.sec-h em{font-style:italic;color:var(--blue-l)}
+.sec-sub{font-size:0.98rem;color:var(--muted);max-width:520px;line-height:1.75}
+/* reveal */
+.rev{opacity:0;transform:translateY(35px);transition:opacity 0.85s cubic-bezier(.16,1,.3,1),transform 0.85s cubic-bezier(.16,1,.3,1)}
+.rev.in{opacity:1;transform:translateY(0)}
+.rev-l{opacity:0;transform:translateX(-35px);transition:opacity 0.85s cubic-bezier(.16,1,.3,1),transform 0.85s cubic-bezier(.16,1,.3,1)}
+.rev-l.in{opacity:1;transform:translateX(0)}
+.rev-r{opacity:0;transform:translateX(35px);transition:opacity 0.85s cubic-bezier(.16,1,.3,1),transform 0.85s cubic-bezier(.16,1,.3,1)}
+.rev-r.in{opacity:1;transform:translateX(0)}
+.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}.delay-3{transition-delay:0.3s}
+.delay-4{transition-delay:0.4s}.delay-5{transition-delay:0.5s}
+
+/* section divider */
+.sec-divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--border),transparent);
+}
+
+/* ========================================
+   ABOUT
+======================================== */
+#about{background:var(--navy2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-main{
+  border-radius:1.5rem;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  aspect-ratio:4/5;
+}
+.about-img-main img{width:100%;height:100%;object-fit:cover;object-position:top}
+.about-badge-card{
+  position:absolute;bottom:-1.5rem;right:-1.5rem;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  border-radius:1.2rem;padding:1.2rem 1.5rem;
+  text-align:center;box-shadow:0 15px 40px rgba(26,111,255,0.4);
+}
+.badge-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:#fff;line-height:1}
+.badge-l{font-size:0.72rem;color:rgba(255,255,255,0.8);font-weight:600;letter-spacing:0.06em}
+.about-text{}
+.about-body{font-size:0.97rem;color:var(--muted);line-height:1.9;margin-bottom:2rem}
+.about-body strong{color:var(--white);font-weight:600}
+.about-skills{margin-bottom:2rem}
+.skill-item{margin-bottom:1.3rem}
+.skill-head{display:flex;justify-content:space-between;margin-bottom:0.5rem}
+.skill-name{font-size:0.85rem;font-weight:600;color:var(--white)}
+.skill-pct{font-size:0.78rem;color:var(--blue-l);font-weight:700}
+.skill-track{height:4px;background:rgba(100,160,255,0.12);border-radius:4px;overflow:hidden}
+.skill-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--cyan));width:0;transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.tag{
+  background:rgba(26,111,255,0.1);
+  border:1px solid rgba(26,111,255,0.2);
+  color:var(--blue-l);font-size:0.75rem;font-weight:600;
+  padding:0.35rem 0.9rem;border-radius:100px;
+  transition:background 0.25s,border-color 0.25s;
+}
+.tag:hover{background:rgba(26,111,255,0.2);border-color:rgba(26,111,255,0.4)}
+
+/* ========================================
+   SKILLS HIGHLIGHT
+======================================== */
+#skills{background:var(--navy)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.skill-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.8rem;
+  transition:transform 0.35s cubic-bezier(.16,1,.3,1),border-color 0.3s,box-shadow 0.35s;
+  position:relative;overflow:hidden;
+}
+.skill-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(26,111,255,0.08), transparent 65%);
+  opacity:0;transition:opacity 0.35s;pointer-events:none;
+}
+.skill-card:hover::before{opacity:1}
+.skill-card:hover{transform:translateY(-6px);border-color:rgba(26,111,255,0.3);box-shadow:0 20px 50px rgba(0,0,40,0.5)}
+.sc-ico{
+  width:48px;height:48px;border-radius:0.8rem;
+  background:rgba(26,111,255,0.12);
+  border:1px solid rgba(26,111,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:1.2rem;
+  transition:background 0.3s,transform 0.4s cubic-bezier(.34,1.56,.64,1);
+}
+.skill-card:hover .sc-ico{background:var(--blue);transform:rotate(8deg) scale(1.1)}
+.sc-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem}
+.sc-desc{font-size:0.82rem;color:var(--muted);line-height:1.7}
+.sc-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.sc-tag{font-size:0.68rem;font-weight:600;color:var(--cyan);background:rgba(0,196,255,0.08);border:1px solid rgba(0,196,255,0.2);padding:0.22rem 0.65rem;border-radius:100px}
+
+/* ========================================
+   EXPERIENCE TIMELINE
+======================================== */
+#experience{background:var(--navy2)}
+.exp-layout{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.exp-left{}
+.exp-img{
+  border-radius:1.2rem;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  aspect-ratio:3/4;
+  margin-top:2rem;
+}
+.exp-img img{width:100%;height:100%;object-fit:cover}
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{
+  content:'';position:absolute;left:0;top:8px;bottom:8px;
+  width:2px;background:linear-gradient(180deg,var(--blue),transparent);
+  border-radius:2px;
+}
+.t-item{position:relative;margin-bottom:3rem}
+.t-dot{
+  position:absolute;left:-2.63rem;top:6px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--blue);
+  border:3px solid var(--navy2);
+  box-shadow:0 0 0 3px rgba(26,111,255,0.3);
+}
+.t-date{
+  font-size:0.72rem;font-weight:700;
+  color:var(--blue-l);letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:0.5rem;
+}
+.t-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.6rem 1.8rem;
+  transition:border-color 0.3s,transform 0.3s;
+}
+.t-card:hover{border-color:rgba(26,111,255,0.3);transform:translateX(5px)}
+.t-role{font-size:1.05rem;font-weight:800;color:var(--white);margin-bottom:0.25rem}
+.t-company{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-size:0.82rem;font-weight:600;color:var(--blue-l);margin-bottom:1rem;
+}
+.t-company i{font-size:0.75rem}
+.t-bullets{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.t-bullets li{
+  font-size:0.85rem;color:var(--muted);line-height:1.6;
+  display:flex;gap:0.7rem;align-items:flex-start;
+}
+.t-bullets li::before{
+  content:'▸';color:var(--cyan);flex-shrink:0;margin-top:0.05rem;font-size:0.75rem;
+}
+.t-type{
+  display:inline-block;
+  font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  background:rgba(0,196,255,0.1);border:1px solid rgba(0,196,255,0.25);
+  color:var(--cyan);padding:0.2rem 0.65rem;border-radius:100px;
+  margin-bottom:0.8rem;
+}
+
+/* ========================================
+   SERVICES
+======================================== */
+#services{background:var(--navy)}
+.services-intro{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;align-items:end;margin-bottom:3.5rem;
+}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.srv-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:2rem 1.8rem;
+  transition:transform 0.35s cubic-bezier(.16,1,.3,1),border-color 0.3s,box-shadow 0.35s;
+  position:relative;overflow:hidden;
+}
+.srv-card::after{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s cubic-bezier(.16,1,.3,1);
+}
+.srv-card:hover::after{transform:scaleX(1)}
+.srv-card:hover{transform:translateY(-7px);border-color:rgba(26,111,255,0.25);box-shadow:0 25px 55px rgba(0,0,40,0.55)}
+.srv-ico{
+  width:52px;height:52px;border-radius:1rem;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:1.3rem;
+  transition:transform 0.4s cubic-bezier(.34,1.56,.64,1);
+}
+.srv-card:hover .srv-ico{transform:scale(1.15) rotate(5deg)}
+.srv-ico.blue{background:rgba(26,111,255,0.12);border:1px solid rgba(26,111,255,0.2)}
+.srv-ico.cyan{background:rgba(0,196,255,0.1);border:1px solid rgba(0,196,255,0.2)}
+.srv-ico.gold{background:rgba(255,209,102,0.1);border:1px solid rgba(255,209,102,0.2)}
+.srv-name{font-size:1.05rem;font-weight:800;color:var(--white);margin-bottom:0.55rem}
+.srv-desc{font-size:0.83rem;color:var(--muted);line-height:1.75}
+
+/* ========================================
+   PORTFOLIO
+======================================== */
+#portfolio{background:var(--navy2)}
+.pf-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin:1.8rem 0 2.5rem}
+.pf-tab{
+  background:transparent;border:1px solid var(--border);
+  color:var(--muted);font-size:0.78rem;font-weight:600;
+  padding:0.45rem 1.1rem;border-radius:100px;
+  transition:all 0.25s;letter-spacing:0.04em;
+}
+.pf-tab.active,.pf-tab:hover{background:rgba(26,111,255,0.12);border-color:rgba(26,111,255,0.3);color:var(--white)}
+.pf-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
+}
+.pf-card{
+  border-radius:var(--radius);overflow:hidden;
+  position:relative;cursor:pointer;
+  border:1px solid var(--border);
+  transition:transform 0.45s cubic-bezier(.16,1,.3,1),box-shadow 0.45s;
+  aspect-ratio:4/3;
+}
+.pf-card:nth-child(1){grid-column:span 2;aspect-ratio:16/9}
+.pf-card:hover{transform:scale(1.02);box-shadow:0 30px 70px rgba(0,0,40,0.6)}
+.pf-img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}
+.pf-card:hover .pf-img{transform:scale(1.06)}
+.pf-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(5,13,31,0.92) 0%,rgba(5,13,31,0.2) 50%,transparent 100%);
+  padding:1.5rem;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  opacity:0;transition:opacity 0.35s;
+}
+.pf-card:hover .pf-overlay{opacity:1}
+.pf-cat{font-size:0.68rem;color:var(--cyan);font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.3rem}
+.pf-name{font-size:1rem;font-weight:800;color:#fff}
+.pf-arrow{
+  position:absolute;top:1rem;right:1rem;
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(5,13,31,0.7);backdrop-filter:blur(8px);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.75rem;color:var(--muted);
+  transition:background 0.25s,color 0.25s;
+}
+.pf-card:hover .pf-arrow{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* ========================================
+   CTA BAND
+======================================== */
+.cta-band{
+  background:linear-gradient(135deg,var(--navy2),var(--navy3));
+  border:1px solid var(--border);
+  border-radius:2rem;
+  padding:4rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+  margin:4rem 0;
+}
+.cta-band::before{
+  content:'';position:absolute;
+  top:-80px;left:50%;transform:translateX(-50%);
+  width:400px;height:200px;
+  background:radial-gradient(ellipse,rgba(26,111,255,0.2),transparent 70%);
+  pointer-events:none;
+}
+.cta-band h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-weight:800;margin-bottom:0.8rem;
+}
+.cta-band p{font-size:0.98rem;color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto}
+
+/* ========================================
+   LINKEDIN / COMMUNITY
+======================================== */
+#community{background:var(--navy)}
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.comm-stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.comm-stat{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.5rem;
+  transition:transform 0.3s,border-color 0.3s;
+}
+.comm-stat:hover{transform:translateY(-4px);border-color:rgba(26,111,255,0.3)}
+.cs-n{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;font-weight:800;
+  background:linear-gradient(135deg,var(--blue-l),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;margin-bottom:0.25rem;
+}
+.cs-l{font-size:0.75rem;color:var(--muted);font-weight:500}
+.comm-img{
+  border-radius:1.5rem;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.comm-img img{width:100%;display:block;object-fit:cover}
+.comm-img-badge{
+  position:absolute;top:1.2rem;right:1.2rem;
+  background:rgba(9,20,40,0.85);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  border-radius:0.75rem;
+  padding:0.6rem 1rem;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.li-icon{font-size:1.2rem;color:#0077B5}
+.li-text{font-size:0.75rem;font-weight:700;color:var(--white)}
+
+/* ========================================
+   CONTACT
+======================================== */
+#contact{background:var(--navy2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.contact-info{}
+.contact-details{margin-top:2rem;display:flex;flex-direction:column;gap:1.2rem}
+.cd-item{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--card-bg);border:1px solid var(--border);
+  border-radius:0.9rem;padding:1rem 1.3rem;
+  transition:border-color 0.3s,transform 0.3s;
+  text-decoration:none;
+}
+.cd-item:hover{border-color:rgba(26,111,255,0.3);transform:translateX(5px)}
+.cd-ico{
+  width:40px;height:40px;border-radius:0.7rem;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.cd-ico.blue{background:rgba(26,111,255,0.12);color:var(--blue-l)}
+.cd-ico.cyan{background:rgba(0,196,255,0.1);color:var(--cyan)}
+.cd-ico.green{background:rgba(0,200,100,0.1);color:#00c864}
+.cd-ico.gold{background:rgba(255,209,102,0.1);color:var(--accent)}
+.cd-label{font-size:0.68rem;color:var(--muted);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.1rem}
+.cd-value{font-size:0.88rem;color:var(--white);font-weight:600}
+.social-btns{display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap}
+.soc-btn{
+  width:44px;height:44px;border-radius:0.7rem;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:var(--muted);
+  transition:all 0.3s;
+}
+.soc-btn:hover{border-color:var(--blue-l);color:var(--white);background:rgba(26,111,255,0.1);transform:translateY(-3px)}
+/* form */
+.contact-form{display:flex;flex-direction:column;gap:1.2rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.f-g{display:flex;flex-direction:column;gap:0.4rem}
+.f-g label{font-size:0.72rem;color:var(--muted);font-weight:600;letter-spacing:0.1em;text-transform:uppercase}
+.f-g input,.f-g textarea,.f-g select{
+  background:rgba(9,20,40,0.7);
+  border:1px solid var(--border);
+  border-radius:0.75rem;
+  padding:0.85rem 1.1rem;
+  color:var(--white);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.9rem;outline:none;resize:none;
+  transition:border-color 0.3s,background 0.3s;
+  -webkit-appearance:none;
+}
+.f-g input:focus,.f-g textarea:focus,.f-g select:focus{border-color:rgba(26,111,255,0.5);background:rgba(26,111,255,0.04)}
+.f-g input::placeholder,.f-g textarea::placeholder{color:#3a4a6a}
+.f-g select option{background:var(--navy2)}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer{
+  background:var(--navy);
+  border-top:1px solid var(--border);
+  padding:3rem 5% 2rem;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1.5rem;
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--border);
+  margin-bottom:2rem;
+}
+.footer-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;font-weight:800;
+  background:linear-gradient(135deg,#fff,var(--blue-l));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.footer-links{display:flex;gap:0.25rem;flex-wrap:wrap}
+.footer-links a{
+  font-size:0.8rem;color:var(--muted);padding:0.35rem 0.8rem;border-radius:100px;
+  transition:color 0.25s,background 0.25s;
+}
+.footer-links a:hover{color:var(--white);background:rgba(26,111,255,0.1)}
+.footer-bottom{
+  max-width:1200px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-copy{font-size:0.78rem;color:var(--muted)}
+.footer-made{font-size:0.78rem;color:var(--muted)}
+.footer-made span{color:var(--blue-l)}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-img-wrap{display:flex;justify-content:center}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .exp-layout{grid-template-columns:1fr}
+  .services-intro{grid-template-columns:1fr}
+  .comm-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .pf-grid{grid-template-columns:repeat(2,1fr)}
+  .pf-card:nth-child(1){grid-column:span 1;aspect-ratio:4/3}
+}
+@media(max-width:768px){
+  nav{padding:0.9rem 5%}
+  .nav-links,.nav-hire{display:none}
+  .hamburger{display:flex}
+  .hero-img-ring{width:240px;height:275px}
+  .hero-float.f1{right:-10px}
+  .hero-float.f2{left:-10px}
+  .about-badge-card{right:-0.5rem;bottom:-0.5rem}
+  .skills-grid,.services-grid,.pf-grid{grid-template-columns:1fr}
+  .pf-card:nth-child(1){grid-column:span 1;aspect-ratio:4/3}
+  .comm-stat-cards{grid-template-columns:1fr 1fr}
+  .f-row{grid-template-columns:1fr}
+  .cta-band{padding:2.5rem 1.5rem;border-radius:1.2rem}
+  .section-pad{padding:70px 0}
+}
+
+/* ========================================
+   IMAGE PLACEHOLDERS
+======================================== */
+.img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1rem;
+  background: rgba(9,20,40,0.6);
+  border: 2px dashed rgba(77,143,255,0.28);
+  border-radius: inherit;
+}
+.img-placeholder.portrait-ph { min-height: 320px; }
+.img-placeholder svg { width: 64px; height: 64px; opacity: 0.7; }
+.img-placeholder span {
+  font-size: 0.72rem; font-weight: 600;
+  color: rgba(77,143,255,0.6);
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+/* hero inner img placeholder */
+.hero-img-inner .img-placeholder {
+  border-radius: inherit;
+  min-height: 100%;
+}
+/* about img placeholder */
+.about-img-main .img-placeholder {
+  min-height: 340px;
+  border-radius: 1.5rem;
+}
+/* exp img placeholder */
+.exp-img .img-placeholder {
+  min-height: 280px;
+}
+/* comm img placeholder */
+.comm-img .img-placeholder {
+  min-height: 340px;
+}
+/* ========================================
+   LIGHTBOX
+======================================== */
+.lb-backdrop {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(3,8,20,0.96);
+  backdrop-filter: blur(18px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.lb-backdrop.open {
+  opacity: 1; pointer-events: all;
+}
+.lb-box {
+  position: relative;
+  max-width: min(900px, 92vw);
+  width: 100%;
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.4s cubic-bezier(.16,1,.3,1);
+}
+.lb-backdrop.open .lb-box {
+  transform: scale(1) translateY(0);
+}
+.lb-img-wrap {
+  border-radius: 16px; overflow: hidden;
+  border: 1px solid rgba(77,143,255,0.18);
+  box-shadow: 0 40px 100px rgba(0,0,40,0.8);
+  position: relative;
+  max-height: 78vh;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(9,20,40,0.8);
+}
+.lb-img-wrap img {
+  width: 100%; max-height: 78vh;
+  object-fit: contain; display: block;
+  border-radius: 16px;
+}
+.lb-info {
+  margin-top: 1.2rem;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 1rem;
+}
+.lb-info-left {}
+.lb-info-tag {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--cyan); margin-bottom: 0.3rem;
+}
+.lb-info-title {
+  font-size: 1.1rem; font-weight: 800; color: #fff;
+  margin-bottom: 0.2rem; line-height: 1.3;
+}
+.lb-info-sub {
+  font-size: 0.78rem; color: rgba(240,246,255,0.5);
+}
+.lb-close {
+  flex-shrink: 0;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(77,143,255,0.3);
+  background: rgba(26,111,255,0.1);
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s;
+}
+.lb-close:hover {
+  background: rgba(26,111,255,0.25);
+  border-color: rgba(77,143,255,0.6);
+  color: #fff; transform: scale(1.1);
+}
+/* prev/next inside lightbox */
+.lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(77,143,255,0.3);
+  background: rgba(9,20,40,0.85);
+  backdrop-filter: blur(8px);
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s; z-index: 2;
+}
+.lb-nav:hover {
+  background: rgba(26,111,255,0.3);
+  border-color: rgba(77,143,255,0.6);
+  color: #fff;
+}
+.lb-nav.prev { left: -22px; }
+.lb-nav.next { right: -22px; }
+@media(max-width:600px) {
+  .lb-nav.prev { left: 8px; }
+  .lb-nav.next { right: 8px; }
+  .lb-info-title { font-size: 0.9rem; }
+}
+
+/* ========================================
+   HORIZONTAL SCROLL GALLERY
+======================================== */
+.gallery-section { padding: 0; }
+
+.gallery-header {
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+}
+.gallery-header-left {}
+.gallery-label {
+  display: block;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--blue-l); margin-bottom: 0.4rem;
+}
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800; color: var(--white); margin: 0;
+}
+.gallery-controls {
+  display: flex; align-items: center; gap: 1rem;
+}
+.gallery-btn {
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid rgba(77,143,255,0.3);
+  background: rgba(26,111,255,0.08);
+  color: rgba(77,143,255,0.9);
+  font-size: 1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s;
+}
+.gallery-btn:hover {
+  background: rgba(26,111,255,0.22);
+  border-color: rgba(77,143,255,0.7);
+  color: #fff; transform: scale(1.08);
+}
+.gallery-btn:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
+.gallery-counter {
+  font-size: 0.8rem; color: rgba(255,255,255,0.35);
+  min-width: 40px; text-align: center;
+}
+.gallery-track-wrapper {
+  overflow: hidden; border-radius: 14px;
+}
+.gallery-track {
+  display: flex; gap: 1.2rem;
+  transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
+  will-change: transform;
+}
+
+/* Cards */
+.g-card {
+  flex: 0 0 calc(25% - 0.9rem);
+  min-width: calc(25% - 0.9rem);
+  position: relative; border-radius: 14px;
+  overflow: hidden;
+  background: rgba(9,20,40,0.8);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
+  aspect-ratio: 3/4;
+}
+.g-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(77,143,255,0.4);
+  box-shadow: 0 24px 64px rgba(0,0,40,0.6), 0 0 30px rgba(26,111,255,0.08);
+}
+.g-img-wrap {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+.g-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+  transition: transform 0.55s ease;
+}
+.g-card:hover .g-img-wrap img { transform: scale(1.07); }
+
+/* Overlay — always visible at bottom */
+.g-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 1.4rem 1.25rem;
+  background: linear-gradient(to top, rgba(5,13,31,0.97) 0%, rgba(5,13,31,0.55) 55%, transparent 100%);
+  z-index: 2;
+}
+.g-tag {
+  font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--cyan);
+  display: inline-block; margin-bottom: 0.4rem;
+}
+.g-title {
+  font-size: 0.9rem; font-weight: 800;
+  color: #fff; margin: 0 0 0.3rem; line-height: 1.35;
+}
+.g-sub {
+  font-size: 0.7rem; color: rgba(240,246,255,0.55); margin: 0;
+}
+
+/* Dots */
+.gallery-dots {
+  display: flex; justify-content: center;
+  gap: 0.5rem; margin-top: 1.6rem;
+}
+.g-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(77,143,255,0.22);
+  border: none; cursor: pointer;
+  transition: all 0.3s; padding: 0;
+}
+.g-dot.active {
+  background: rgba(77,143,255,0.9);
+  width: 24px; border-radius: 3px;
+}
+
+/* Placeholder (no image) */
+.g-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.75rem;
+  background: rgba(9,20,40,0.55);
+  border: 2px dashed rgba(77,143,255,0.22);
+  border-radius: inherit;
+}
+.g-placeholder svg { width: 48px; height: 48px; opacity: 0.6; }
+.g-placeholder span {
+  font-size: 0.65rem; font-weight: 600;
+  color: rgba(77,143,255,0.5);
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+
+/* Mobile */
+@media(max-width:900px) {
+  .g-card { flex: 0 0 calc(50% - 0.6rem); min-width: calc(50% - 0.6rem); aspect-ratio: 4/5; }
+}
+@media(max-width:540px) {
+  .g-card { flex: 0 0 82%; min-width: 82%; }
+  .gallery-title { font-size: 1.2rem; }
+}
+
+/* keep cm-overlay / cm-tag / cm-title / cm-sub for any leftover usage */
+.cm-overlay { display: none; }
+.cm-tag, .cm-title, .cm-sub { display: none; }
+
+/* portfolio grid placeholder */
+.pf-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(9,20,40,0.5);
+  border: 2px dashed rgba(77,143,255,0.22);
+  transition: border-color 0.3s;
+}
+.pf-card:hover .pf-placeholder { border-color: rgba(77,143,255,0.45); }
+.pf-placeholder svg { width: 48px; height: 48px; opacity: 0.5; }
+
+/* ========================================
+   CREATIVE DESIGN SUB-HEADER
+======================================== */
+.creative-sub-header {
+  display: flex; align-items: center; gap: 2rem;
+  margin: 3rem 0 2.5rem;
+}
+.creative-sub-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100,160,255,0.2), transparent);
+}
+.creative-sub-inner { text-align: center; flex-shrink: 0; }
+.creative-sub-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--blue-l);
+  background: rgba(26,111,255,0.08);
+  border: 1px solid rgba(26,111,255,0.2);
+  padding: 0.35rem 1rem; border-radius: 100px;
+  margin-bottom: 0.6rem;
+}
+.creative-sub-h {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800; color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.creative-sub-p {
+  font-size: 0.82rem; color: var(--muted);
+  max-width: 340px; margin: 0 auto;
+}
+/* ========================================
+   DESIGN SERVICES IMAGE CARDS
+======================================== */
+/* .dsrv-img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.dsrv-img-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(.16,1,.3,1), border-color 0.3s, box-shadow 0.35s;
+}
+.dsrv-img-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(26,111,255,0.3);
+  box-shadow: 0 24px 55px rgba(0,0,40,0.55);
+}
+.dsrv-img-top {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.dsrv-img-top img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+  display: block;
+}
+.dsrv-img-card:hover .dsrv-img-top img { transform: scale(1.08); }
+.dsrv-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(5,13,31,0.75) 0%, transparent 60%);
+  display: flex; align-items: flex-end; padding: 0.9rem;
+  pointer-events: none;
+}
+.dsrv-img-icon {
+  width: 36px; height: 36px; border-radius: 0.6rem;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+}
+.dsrv-img-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+.dsrv-img-body h4 {
+  font-size: 0.88rem; font-weight: 700; color: var(--white);
+  margin-bottom: 0.4rem; line-height: 1.35;
+}
+.dsrv-img-body p {
+  font-size: 0.76rem; color: var(--muted);
+  line-height: 1.65; margin-bottom: 0.75rem;
+}
+.dsrv-img-tags {
+  display: flex; flex-wrap: wrap; gap: 0.35rem;
+}
+.dsrv-img-tags span {
+  font-size: 0.65rem; font-weight: 600;
+  color: var(--cyan);
+  background: rgba(0,196,255,0.07);
+  border: 1px solid rgba(0,196,255,0.18);
+  padding: 0.18rem 0.6rem; border-radius: 100px;
+}
+@media(max-width:1024px) { .dsrv-img-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px)  { .dsrv-img-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body> */
+
+<!-- ====================================================
+     NAVIGATION
+==================================================== -->
+<nav id="navbar">
+  <div class="nav-logo">FA<span style="color:var(--blue)">.</span></div>
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#creative">Design Studio</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hire" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#creative" onclick="closeMobile()">Design Studio</a>
+  <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ====================================================
+     HERO
+==================================================== -->
+<section id="home">
+  <div class="hero-mesh"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="hero-inner container" style="padding-top:0">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-title">
+        Hello, I'm<br>
+        <span>Faizyab Ahmad</span>
+      </h1>
+      <p class="hero-sub">A results-driven professional bridging the gap between procurement excellence, digital commerce, and creative design — based in Islamabad, Pakistan.</p>
+      <div class="hero-roles">
+        <span class="role-chip">⚙️ Procurement Executive</span>
+        <span class="role-chip">📦 SAP MM Specialist</span>
+        <span class="role-chip">🛒 E-Commerce Consultant</span>
+        <span class="role-chip">🎨 Graphic Designer</span>
+        <span class="role-chip">💻 Frontend Developer</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn-primary"><i class="fa-solid fa-eye"></i> View My Work</a>
+        <a href="#contact" class="btn-outline"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="h-stat-n" data-count="150">0</div>
+          <div class="h-stat-l">PRs / POs Monthly</div>
+        </div>
+        <div>
+          <div class="h-stat-n" data-count="12">0</div>
+          <div class="h-stat-l">% Cost Reduction</div>
+        </div>
+        <div>
+          <div class="h-stat-n" data-count="10">0</div>
+          <div class="h-stat-l">E-comm Clients</div>
+        </div>
+        <div>
+          <div class="h-stat-n" data-suffix="k+">100k+</div>
+          <div class="h-stat-l">LinkedIn Impressions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <div class="hero-img-ring">
+        <div class="hero-img-inner">
+          <!-- Replace this image with your own professional portrait -->
+          <img src="my image.jpeg" alt="Faizyab Ahmad – Professional Portrait" style="width:100%;height:100%;object-fit:cover;object-position:top center"/>
+        </div>
+      </div>
+      <!-- Float card 1 -->
+      <div class="hero-float f1">
+        <div class="float-ico blue"><i class="fa-solid fa-boxes-stacked" style="color:var(--blue-l)"></i></div>
+        <div>
+          <div class="float-title">SAP MM Expert</div>
+          <div class="float-sub">P2P · MRP · GRN</div>
+        </div>
+      </div>
+      <!-- Float card 2 -->
+      <div class="hero-float f2">
+        <div class="float-ico gold"><i class="fa-brands fa-amazon" style="color:var(--accent)"></i></div>
+        <div>
+          <div class="float-title">E-Commerce</div>
+          <div class="float-sub">Amazon · eBay · UK/USA/AU</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    Scroll Down
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     ABOUT
+==================================================== -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap rev-l">
+        <div class="about-img-main">
+          <!-- Replace with your own photo — a professional office/desk shot works great -->
+          <img src="https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&dpr=1" alt="Professional work environment" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+        </div>
+        <div class="about-badge-card">
+          <div class="badge-n">1+</div>
+          <div class="badge-l">Year at Ferozsons</div>
+        </div>
+      </div>
+
+      <div class="about-text rev-r">
+        <p class="sec-tag">About Me</p>
+        <h2 class="sec-h">Where <em>Procurement</em> Meets <em>Creativity</em></h2>
+        <p class="about-body">
+          I'm <strong>Faizyab Ahmad</strong> — a Computer Science graduate from UET Peshawar with a rare cross-disciplinary skill set. Currently working as a <strong>Procurement Executive at Ferozsons Laboratories Ltd.</strong>, I manage end-to-end P2P operations in SAP MM, oversee 150+ monthly purchase orders, and drive cost-saving initiatives across the pharmaceutical supply chain.<br><br>
+          Beyond procurement, I consult international e-commerce clients on Amazon &amp; eBay marketplace optimisation, design professional graphics and ad creatives for brands, and build responsive websites using modern HTML, CSS &amp; Bootstrap. This unique blend makes me a multidimensional professional ready to deliver value across domains.
+        </p>
+
+        <div class="about-skills">
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">SAP MM / ERP</span><span class="skill-pct">92%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Procurement & P2P Cycle</span><span class="skill-pct">95%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">E-Commerce (Amazon/eBay)</span><span class="skill-pct">88%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Graphic Design & Ad Creatives</span><span class="skill-pct">84%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="84"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Frontend Dev (HTML/CSS/Bootstrap)</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="82"></div></div>
+          </div>
+        </div>
+
+        <div class="about-tags">
+          <span class="tag">Vendor Management</span>
+          <span class="tag">Strategic Sourcing</span>
+          <span class="tag">Inventory Control</span>
+          <span class="tag">GDP Compliance</span>
+          <span class="tag">Cost Optimization</span>
+          <span class="tag">Contract Negotiation</span>
+          <span class="tag">MS Excel</span>
+          <span class="tag">Basic SQL</span>
+          <span class="tag">MRP Planning</span>
+          <span class="tag">Bootstrap 5</span>
+        </div>
+
+        <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
+          <a href="Faizyab_Ahmad_Resume.pdf" download class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
+          <a href="#contact" class="btn-outline"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     SKILLS HIGHLIGHT CARDS
+==================================================== -->
+<section id="skills" class="section-pad">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 0.5rem">
+      <p class="sec-tag" style="justify-content:center">Core Expertise</p>
+      <h2 class="sec-h rev">Skills That <em>Deliver Results</em></h2>
+      <p class="sec-sub rev" style="margin:0 auto">A versatile skill set spanning procurement, technology, e-commerce, design, and web development.</p>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-card rev delay-1">
+        <div class="sc-ico">⚙️</div>
+        <h3 class="sc-title">SAP MM & ERP Systems</h3>
+        <p class="sc-desc">Expert in SAP MM module — managing PRs, RFQs, POs, GRNs, vendor master data, MRP planning, and full P2P cycle execution in a live pharmaceutical environment.</p>
+        <div class="sc-tags"><span class="sc-tag">SAP MM</span><span class="sc-tag">MRP</span><span class="sc-tag">P2P Cycle</span><span class="sc-tag">GRN</span></div>
+      </div>
+
+      <div class="skill-card rev delay-2">
+        <div class="sc-ico">📊</div>
+        <h3 class="sc-title">Procurement Analytics</h3>
+        <p class="sc-desc">Leveraging MS Excel and data models to track supplier KPIs, analyse inventory turnover, identify cost-saving opportunities, and drive continuous procurement improvement.</p>
+        <div class="sc-tags"><span class="sc-tag">MS Excel</span><span class="sc-tag">Basic SQL</span><span class="sc-tag">Dashboards</span><span class="sc-tag">KPI Tracking</span></div>
+      </div>
+
+      <div class="skill-card rev delay-3">
+        <div class="sc-ico">🛒</div>
+        <h3 class="sc-title">E-Commerce Consulting</h3>
+        <p class="sc-desc">Helping international sellers on Amazon and eBay optimise product listings, streamline inventory workflows, and build scalable client acquisition strategies across UK, USA & Australia.</p>
+        <div class="sc-tags"><span class="sc-tag">Amazon</span><span class="sc-tag">eBay</span><span class="sc-tag">Listings</span><span class="sc-tag">Fulfillment</span></div>
+      </div>
+
+      <div class="skill-card rev delay-2">
+        <div class="sc-ico">🎨</div>
+        <h3 class="sc-title">Graphic Design & Ad Creatives</h3>
+        <p class="sc-desc">Designing professional visual content — social media graphics, promotional ad images, brand posters, product banners, and marketing creatives that communicate with impact.</p>
+        <div class="sc-tags"><span class="sc-tag">Ad Images</span><span class="sc-tag">Social Media</span><span class="sc-tag">Branding</span><span class="sc-tag">Banners</span></div>
+      </div>
+
+      <div class="skill-card rev delay-3">
+        <div class="sc-ico">💻</div>
+        <h3 class="sc-title">Frontend Web Development</h3>
+        <p class="sc-desc">Building clean, responsive websites and landing pages with HTML5, CSS3, and Bootstrap 5. Strong eye for layout, typography, and user experience shaped by design sensibility.</p>
+        <div class="sc-tags"><span class="sc-tag">HTML5</span><span class="sc-tag">CSS3</span><span class="sc-tag">Bootstrap 5</span><span class="sc-tag">Responsive</span></div>
+      </div>
+
+      <div class="skill-card rev delay-4">
+        <div class="sc-ico">🤝</div>
+        <h3 class="sc-title">Vendor Management & Sourcing</h3>
+        <p class="sc-desc">Negotiating strategic contracts, maintaining supplier scorecards, managing relationships with 15+ vendors, and ensuring GDP-compliant delivery across pharmaceutical supply chains.</p>
+        <div class="sc-tags"><span class="sc-tag">Negotiation</span><span class="sc-tag">Sourcing</span><span class="sc-tag">GDP</span><span class="sc-tag">Scorecards</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     EXPERIENCE TIMELINE
+==================================================== -->
+<section id="experience" class="section-pad">
+  <div class="container">
+    <div class="exp-layout">
+      <div class="exp-left rev-l">
+        <p class="sec-tag">Work History</p>
+        <h2 class="sec-h">Professional <em>Experience</em></h2>
+        <p class="sec-sub">Real-world impact across pharmaceutical procurement, international e-commerce, and creative services.</p>
+        <div class="exp-img">
+          <!-- Replace with a photo of your actual workspace or Ferozsons office -->
+          <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1" alt="Procurement & ERP workspace" style="width:100%;height:100%;object-fit:cover"/>
+        </div>
+      </div>
+
+      <div class="rev-r delay-1">
+        <div class="timeline">
+
+          <!-- Job 1 -->
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-date"><i class="fa-regular fa-calendar"></i> Aug 2024 – Present</div>
+            <div class="t-card">
+              <span class="t-type">Full-Time</span>
+              <div class="t-role">Procurement Executive</div>
+              <div class="t-company"><i class="fa-solid fa-building"></i> Ferozsons Laboratories Ltd., Islamabad</div>
+              <ul class="t-bullets">
+                <li>Managed end-to-end P2P cycle in SAP MM — processing <strong style="color:var(--white)">150+ Purchase Requisitions (PRs), RFQs, POs &amp; GRNs</strong> per month for pharmaceutical raw and packaging materials.</li>
+                <li>Negotiated strategic contracts with <strong style="color:var(--white)">15+ vendors</strong>, achieving a <strong style="color:var(--cyan)">12% cost reduction</strong> on critical pharmaceutical materials while maintaining full GDP compliance.</li>
+                <li>Reduced average PO processing time by <strong style="color:var(--cyan)">~20%</strong> by standardising vendor communication templates and streamlining SAP MM workflows.</li>
+                <li>Maintained vendor master data, pricing records, and supplier performance scorecards in SAP ERP — tracking delivery KPIs, quality metrics, and pricing competitiveness.</li>
+                <li>Collaborated cross-functionally with QA, warehouse &amp; finance teams to resolve invoice discrepancies and reduce supply disruptions by <strong style="color:var(--cyan)">15%</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-date"><i class="fa-regular fa-calendar"></i> Jan 2023 – Present</div>
+            <div class="t-card">
+              <span class="t-type">Part-Time / Freelance</span>
+              <div class="t-role">E-Commerce & Client Acquisition Consultant</div>
+              <div class="t-company"><i class="fa-solid fa-globe"></i> Freelance — UK, USA, Australia</div>
+              <ul class="t-bullets">
+                <li>Provided marketplace optimisation consulting for <strong style="color:var(--white)">10+ international clients</strong> on Amazon and eBay — advising on product listings, inventory systems, and fulfilment workflows.</li>
+                <li>Built client acquisition strategies by identifying pain points and delivering tailored solutions, resulting in measurable improvements in <strong style="color:var(--cyan)">sales conversion and operational efficiency</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Graphic Design -->
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-date"><i class="fa-regular fa-calendar"></i> 2022 – Present</div>
+            <div class="t-card">
+              <span class="t-type">Freelance / Self-Employed</span>
+              <div class="t-role">Graphic Designer & Frontend Web Developer</div>
+              <div class="t-company"><i class="fa-solid fa-palette"></i> Independent Creative Services</div>
+              <ul class="t-bullets">
+                <li>Designed <strong style="color:var(--white)">professional ad images, promotional banners, social media graphics</strong>, and brand visual assets for clients across various industries.</li>
+                <li>Built responsive websites and landing pages using <strong style="color:var(--white)">HTML5, CSS3, and Bootstrap 5</strong> — delivering clean, modern user interfaces with strong visual design principles.</li>
+                <li>Combined procurement domain knowledge with creative skills to produce <strong style="color:var(--cyan)">data-driven infographics and supply chain visualisations</strong> for LinkedIn content.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     SERVICES
+==================================================== -->
+
+
+    <!-- CTA Band -->
+    <div class="cta-band rev">
+      <h2>Have a Project in Mind?</h2>
+      <p>Whether it's a procurement challenge, an e-commerce store, or a visual campaign — I bring precision and creativity to every brief.</p>
+      <a href="#contact" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Let's Work Together</a>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     CREATIVE DESIGN STUDIO
+==================================================== -->
+<section id="creative" class="section-pad" style="background:var(--navy2)">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="creative-header">
+      <div class="rev-l">
+        <p class="sec-tag">Creative Design Studio</p>
+        <h2 class="sec-h">Client Work &amp;<br><em>Design Samples</em></h2>
+        <p class="sec-sub" style="max-width:440px">Real projects delivered for real clients — from AI product photography and eCommerce visuals to portrait retouching and social media campaigns.</p>
+      </div>
+      <div class="creative-offer-badges rev-r">
+        <div class="offer-badge"><i class="fa-solid fa-check-circle" style="color:var(--cyan)"></i> Portrait & Editorial Retouching</div>
+        <div class="offer-badge"><i class="fa-solid fa-check-circle" style="color:var(--cyan)"></i> AI Product Photography</div>
+        <div class="offer-badge"><i class="fa-solid fa-check-circle" style="color:var(--cyan)"></i> eCommerce Visual Production</div>
+        <div class="offer-badge"><i class="fa-solid fa-check-circle" style="color:var(--cyan)"></i> Photorealistic Enhancement</div>
+        <div class="offer-badge"><i class="fa-solid fa-check-circle" style="color:var(--cyan)"></i> AI Video for Social Media</div>
+        <div class="offer-badge"><i class="fa-solid fa-check-circle" style="color:var(--cyan)"></i> Premium Marketing Creatives</div>
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="pf-tabs creative-tabs">
+      <button class="pf-tab active" data-cf="all">All</button>
+      <button class="pf-tab" data-cf="retouching">Portrait Retouching</button>
+      <button class="pf-tab" data-cf="product">AI Product</button>
+      <button class="pf-tab" data-cf="ecom">eCommerce</button>
+      <button class="pf-tab" data-cf="ads">Marketing Ads</button>
+      <button class="pf-tab" data-cf="social">Social Media</button>
+    </div>
+
+    <!-- Horizontal Scroll Gallery -->
+    <div class="gallery-section">
+
+      <div class="gallery-header">
+        <div class="gallery-header-left">
+          <span class="gallery-label">Selected Works</span>
+          <h3 class="gallery-title">Client Work &amp; Design Samples</h3>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-btn" id="galleryLeft" aria-label="Previous">&#8592;</button>
+          <span class="gallery-counter"><span id="currentSlide">1</span> / 9</span>
+          <button class="gallery-btn" id="galleryRight" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+
+      <div class="gallery-track-wrapper">
+        <div class="gallery-track" id="galleryTrack">
+
+          <!-- CARD 1 — Shirts Fashion Ad -->
+          <div class="g-card" data-cf="ads">
+            <div class="g-img-wrap">
+              <img src="SHIRTS AD.jpg" alt="Premium Fashion Ad"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">Fashion & Apparel Creative</div>
+              <h4 class="g-title">Premium T-Shirt Campaign — A&H Brand</h4>
+              <p class="g-sub">Print Ad · Editorial Layout · Fashion That Celebrates Uniqueness</p>
+            </div>
+          </div>
+
+          <!-- CARD 2 — 4-in-1 Product Set -->
+          <div class="g-card" data-cf="ecom">
+            <div class="g-img-wrap">
+              <img src="4 IN 1.jpg" alt="Luxury Product Set"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">eCommerce Visual Production</div>
+              <h4 class="g-title">Luxury Multi-Product Set — Beauty & Lifestyle</h4>
+              <p class="g-sub">Amazon A+ · Lifestyle Photography · Skincare & Fragrance</p>
+            </div>
+          </div>
+
+          <!-- CARD 3 — Xiaomi Phone Ad -->
+          <div class="g-card" data-cf="product">
+            <div class="g-img-wrap">
+              <img src="PHONE AD.jpg" alt="Xiaomi 17 Pro Ad"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">AI Product Photography</div>
+              <h4 class="g-title">Xiaomi 17 Pro — Tech Campaign Visual</h4>
+              <p class="g-sub">Feature Callouts · Campaign Ready · Lifestyle Composite</p>
+            </div>
+          </div>
+
+          <!-- CARD 4 — OPPO Phone Ad -->
+          <div class="g-card" data-cf="product">
+            <div class="g-img-wrap">
+              <img src="PHONE AD 2.jpg" alt="OPPO Find X9 Ultra Ad"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">Premium Marketing Creative</div>
+              <h4 class="g-title">OPPO Find X9 Ultra — Editorial Dark Campaign</h4>
+              <p class="g-sub">Cinematic · High-Contrast · Paid Social Ready</p>
+            </div>
+          </div>
+
+          <!-- CARD 5 — Torch Logo -->
+          <div class="g-card" data-cf="ads">
+            <div class="g-img-wrap">
+              <img src="torch.jpg" alt="Torch Brand Logo"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">Brand Identity & Logo Design</div>
+              <h4 class="g-title">Torch — Logo & Brand Mark Design</h4>
+              <p class="g-sub">Typography · Icon Design · Minimalist Identity</p>
+            </div>
+          </div>
+
+          <!-- CARD 6 — Spring Water Ad -->
+          <div class="g-card" data-cf="product">
+            <div class="g-img-wrap">
+              <img src="water AD.jpg" alt="Spring Water Ad"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">AI Product Photography</div>
+              <h4 class="g-title">Spring Mineral Water — Campaign Visual</h4>
+              <p class="g-sub">AI-Generated · Splash Composite · Drop From Valley</p>
+            </div>
+          </div>
+
+          <!-- CARD 7 — Arctic Pulse Energy Drink -->
+          <div class="g-card" data-cf="ads">
+            <div class="g-img-wrap">
+              <img src="Energy drink AD.jpg" alt="Arctic Pulse Energy Drink Ad"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">High-Impact Marketing Creative</div>
+              <h4 class="g-title">Arctic Pulse Energy Drink — Full Ad Campaign</h4>
+              <p class="g-sub">Facebook Ad · Neon Visual · ROAS-Optimised · Zero Sugar</p>
+            </div>
+          </div>
+
+          <!-- CARD 8 — Matcha Café UI -->
+          <div class="g-card" data-cf="social">
+            <div class="g-img-wrap">
+              <img src="matcha AD.jpg" alt="Matcha Latte Café UI"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">UI Design & Social Media Creative</div>
+              <h4 class="g-title">Moss Café — Matcha Latte Landing Page Design</h4>
+              <p class="g-sub">Web UI · Brand Visual · Crafted Fresh Daily</p>
+            </div>
+          </div>
+
+          <!-- CARD 9 — Placeholder for future work -->
+          <div class="g-card" data-cf="ecom">
+            <div class="g-img-wrap">
+              <img src="meigen2.jpg" alt="Product Photography Set"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">Consistent Product Image Sets</div>
+              <h4 class="g-title">Full Catalogue Set — Lifestyle & Beauty eCommerce</h4>
+              <p class="g-sub">Scalable · Brand Cohesion · Multi-SKU Delivered</p>
+            </div>
+          </div>
+
+        </div><!-- /track -->
+      </div>
+
+      <!-- Dot indicators -->
+      <div class="gallery-dots" id="galleryDots"></div>
+
+    </div><!-- /gallery-section -->
+
+    <!-- Upload note -->
+    
+
+    <div style="text-align:center;margin-top:2.5rem" class="rev">
+      <a href="#contact" class="btn-primary"><i class="fa-solid fa-palette"></i> Hire Me for Design Work</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================
+     PORTFOLIO
+==================================================== -->
+<section id="portfolio" class="section-pad">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem">
+      <div>
+        <p class="sec-tag">My Work</p>
+        <h2 class="sec-h rev">Projects &amp; <em>Portfolio</em></h2>
+      </div>
+      <a href="#contact" class="btn-outline rev">Let's Collaborate &rarr;</a>
+    </div>
+
+    <div class="pf-tabs">
+      <button class="pf-tab active" data-filter="all">All Work</button>
+      <button class="pf-tab" data-filter="procurement">Procurement</button>
+      <button class="pf-tab" data-filter="design">Design</button>
+      <button class="pf-tab" data-filter="web">Web Dev</button>
+      <button class="pf-tab" data-filter="ecom">E-Commerce</button>
+    </div>
+
+    <div class="pf-grid">
+
+      <!-- Supply Chain — dark warehouse logistics aerial -->
+      <div class="pf-card rev delay-1" data-cat="procurement">
+        <img class="pf-img" src="https://images.pexels.com/photos/2226458/pexels-photo-2226458.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1" alt="Supply Chain Optimization" loading="lazy"/>
+        <div class="pf-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Procurement · Academic Project</p>
+          <h3 class="pf-name">Supply Chain Optimization & Vendor Evaluation</h3>
+        </div>
+      </div>
+
+      <!-- ACES system — clean code on dark screen -->
+      <div class="pf-card rev delay-2" data-cat="web">
+        <img class="pf-img" src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Automated Course Evaluation System" loading="lazy"/>
+        <div class="pf-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Web Development · Final Year Project</p>
+          <h3 class="pf-name">Automated Course Evaluation System (ACES)</h3>
+        </div>
+      </div>
+
+      <!-- Social Media Ad Creatives — bold graphic design workspace -->
+      <div class="pf-card rev delay-3" data-cat="design">
+        <img class="pf-img" src="https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Social Media Ad Creatives" loading="lazy"/>
+        <div class="pf-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Graphic Design</p>
+          <h3 class="pf-name">Social Media Ad Creatives & Brand Graphics</h3>
+        </div>
+      </div>
+
+      <!-- Amazon/eBay — minimal e-commerce packaging & product -->
+      <div class="pf-card rev delay-1" data-cat="ecom">
+        <img class="pf-img" src="https://images.pexels.com/photos/5632401/pexels-photo-5632401.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1" alt="Amazon eBay Marketplace" loading="lazy"/>
+        <div class="pf-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">E-Commerce Consulting</p>
+          <h3 class="pf-name">Amazon & eBay Marketplace Optimisation</h3>
+        </div>
+      </div>
+
+      <!-- Vendor Analytics — clean dashboard data charts -->
+      <div class="pf-card rev delay-2" data-cat="procurement">
+        <img class="pf-img" src="https://images.pexels.com/photos/669621/pexels-photo-669621.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1" alt="Procurement Analytics Dashboard" loading="lazy"/>
+        <div class="pf-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Analytics · SAP ERP</p>
+          <h3 class="pf-name">Vendor Performance & Procurement Analytics</h3>
+        </div>
+      </div>
+
+      <!-- Responsive Web — clean modern UI on laptop -->
+      <div class="pf-card rev delay-3" data-cat="web">
+        <img class="pf-img" src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Responsive Landing Pages" loading="lazy"/>
+        <div class="pf-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <div class="pf-overlay">
+          <p class="pf-cat">Frontend Development</p>
+          <h3 class="pf-name">Responsive Landing Pages & Web Interfaces</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     COMMUNITY / LINKEDIN
+==================================================== -->
+<section id="community" class="section-pad">
+  <div class="container">
+    <div class="comm-grid">
+      <div>
+        <p class="sec-tag">LinkedIn & Community</p>
+        <h2 class="sec-h rev">Sharing Knowledge,<br><em>Building Community</em></h2>
+        <p class="sec-sub rev delay-1">As an active LinkedIn content creator, I share practical, experience-based insights on SAP MM, procurement workflows, P2P operations, and career development — helping aspiring supply chain professionals navigate real-world challenges.</p>
+        <div class="comm-stat-cards">
+          <div class="comm-stat rev delay-2">
+            <div class="cs-n">100k+</div>
+            <div class="cs-l">LinkedIn Impressions</div>
+          </div>
+          <div class="comm-stat rev delay-3">
+            <div class="cs-n">500+</div>
+            <div class="cs-l">Procurement Posts</div>
+          </div>
+          <div class="comm-stat rev delay-2">
+            <div class="cs-n">SAP</div>
+            <div class="cs-l">MM Knowledge Sharing</div>
+          </div>
+          <div class="comm-stat rev delay-3">
+            <div class="cs-n">🌍</div>
+            <div class="cs-l">Global Engagement</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem" class="rev delay-4">
+          <a href="https://linkedin.com/in/faizyab-ahmad" target="_blank" class="btn-primary">
+            <i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="comm-img rev-r">
+        <!-- Replace with a screenshot of your LinkedIn profile or a viral post -->
+        <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Professional networking and knowledge sharing" style="width:100%;display:block;object-fit:cover"/>
+        <div class="comm-img-badge">
+          <i class="fa-brands fa-linkedin li-icon"></i>
+          <div class="li-text">linkedin.com/in/faizyab-ahmad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ====================================================
+     CONTACT
+==================================================== -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div style="text-align:center;max-width:540px;margin:0 auto 3.5rem">
+      <p class="sec-tag" style="justify-content:center">Get In Touch</p>
+      <h2 class="sec-h rev">Let's <em>Work Together</em></h2>
+      <p class="sec-sub rev delay-1" style="margin:0 auto">Available for procurement consulting, e-commerce projects, graphic design briefs, and frontend development work. Let's connect.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="rev-l">
+        <div class="contact-details">
+          <a href="mailto:faizyab2023@gmail.com" class="cd-item">
+            <div class="cd-ico blue"><i class="fa-solid fa-envelope"></i></div>
+            <div><div class="cd-label">Email</div><div class="cd-value">faizyab2023@gmail.com</div></div>
+          </a>
+          <a href="tel:+923238559332" class="cd-item">
+            <div class="cd-ico cyan"><i class="fa-solid fa-phone"></i></div>
+            <div><div class="cd-label">Phone</div><div class="cd-value">+92 323 855 9332</div></div>
+          </a>
+          <a href="https://wa.me/923238559332" target="_blank" class="cd-item">
+            <div class="cd-ico green"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><div class="cd-label">WhatsApp</div><div class="cd-value">+92 323 855 9332</div></div>
+          </a>
+          <a href="https://linkedin.com/in/faizyab-ahmad" target="_blank" class="cd-item">
+            <div class="cd-ico blue"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><div class="cd-label">LinkedIn</div><div class="cd-value">linkedin.com/in/faizyab-ahmad</div></div>
+          </a>
+          <div class="cd-item" style="cursor:default">
+            <div class="cd-ico gold"><i class="fa-solid fa-location-dot"></i></div>
+            <div><div class="cd-label">Location</div><div class="cd-value">Islamabad, Pakistan</div></div>
+          </div>
+        </div>
+        <div class="social-btns">
+          <a href="https://linkedin.com/in/faizyab-ahmad" target="_blank" class="soc-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:faizyab2023@gmail.com" class="soc-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/923238559332" target="_blank" class="soc-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="tel:+923238559332" class="soc-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form rev-r" onsubmit="handleForm(event)">
+        <div class="f-row">
+          <div class="f-g">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Smith" required/>
+          </div>
+          <div class="f-g">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@company.com" required/>
+          </div>
+        </div>
+        <div class="f-g">
+          <label>Service Required</label>
+          <select>
+            <option value="" disabled selected>Select a service</option>
+            <option>SAP MM / Procurement Consulting</option>
+            <option>E-Commerce Consulting (Amazon/eBay)</option>
+            <option>Graphic Design & Ad Creatives</option>
+            <option>Frontend Web Development</option>
+            <option>Supply Chain Analytics</option>
+            <option>LinkedIn Personal Branding</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="f-g">
+          <label>Budget Range</label>
+          <select>
+            <option value="" disabled selected>Select budget</option>
+            <option>Under $200</option>
+            <option>$200 – $500</option>
+            <option>$500 – $1,000</option>
+            <option>$1,000+</option>
+            <option>Open to Discussion</option>
+          </select>
+        </div>
+        <div class="f-g">
+          <label>Project Details</label>
+          <textarea rows="5" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="border:none;width:100%;justify-content:center;font-size:0.95rem;padding:1rem">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+        <div id="form-msg" style="display:none;text-align:center;color:var(--cyan);font-size:0.88rem;padding:0.5rem;border:1px solid rgba(0,196,255,0.3);border-radius:0.75rem;background:rgba(0,196,255,0.06)">
+          ✅ Message sent! Faizyab will get back to you within 24 hours.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+==================================================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Faizyab Ahmad</div>
+    <nav class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;gap:0.5rem">
+      <a href="https://linkedin.com/in/faizyab-ahmad" target="_blank" class="soc-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:faizyab2023@gmail.com" class="soc-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/923238559332" target="_blank" class="soc-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 Faizyab Ahmad. All rights reserved.</p>
+    <p class="footer-made">Procurement Executive &middot; SAP MM Specialist &middot; Creative Professional &middot; <span>Islamabad, Pakistan</span></p>
+  </div>
+</footer>
+
+<!-- ====================================================
+     LIGHTBOX
+==================================================== -->
+<div class="lb-backdrop" id="lbBackdrop" role="dialog" aria-modal="true" aria-label="Image preview">
+  <div class="lb-box">
+    <div class="lb-img-wrap">
+      <button class="lb-nav prev" id="lbPrev" aria-label="Previous image">&#8592;</button>
+      <img id="lbImg" src="" alt=""/>
+      <button class="lb-nav next" id="lbNext" aria-label="Next image">&#8594;</button>
+    </div>
+    <div class="lb-info">
+      <div class="lb-info-left">
+        <div class="lb-info-tag" id="lbTag"></div>
+        <div class="lb-info-title" id="lbTitle"></div>
+        <div class="lb-info-sub" id="lbSub"></div>
+      </div>
+      <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================
+     JAVASCRIPT
+==================================================== -->
+<script>
+/* ---- NAV scroll ---- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  // active link
+  const secs = document.querySelectorAll('section[id]');
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+  });
+}, { passive: true });
+
+/* ---- Mobile menu ---- */
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => mob.classList.toggle('open'));
+function closeMobile() { mob.classList.remove('open'); }
+
+/* ---- Reveal on scroll ---- */
+const revs = document.querySelectorAll('.rev,.rev-l,.rev-r');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+revs.forEach(el => obs.observe(el));
+
+/* ---- Skill bars ---- */
+document.querySelectorAll('.skill-bar').forEach(bar => {
+  const io = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      bar.style.width = bar.dataset.w + '%';
+      io.disconnect();
+    }
+  }, { threshold: 0.1 });
+  io.observe(bar);
+});
+
+/* ---- Counter animation ---- */
+function animCount(el, target, suffix) {
+  let cur = 0;
+  const step = Math.ceil(target / 60);
+  const timer = setInterval(() => {
+    cur = Math.min(cur + step, target);
+    el.textContent = cur + (suffix || '');
+    if (cur >= target) clearInterval(timer);
+  }, 25);
+}
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const count = parseInt(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      if (!isNaN(count)) animCount(el, count, suffix);
+      counterObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+/* ---- Skill card mouse glow ---- */
+document.querySelectorAll('.skill-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--x', ((e.clientX - r.left) / r.width * 100) + '%');
+    card.style.setProperty('--y', ((e.clientY - r.top)  / r.height * 100) + '%');
+  });
+});
+
+/* ---- Portfolio filter tabs ---- */
+document.querySelectorAll('.pf-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.pf-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    document.querySelectorAll('.pf-card').forEach(card => {
+      const cat = card.dataset.cat;
+      const show = filter === 'all' || cat === filter;
+      card.style.opacity = show ? '1' : '0.25';
+      card.style.transform = show ? '' : 'scale(0.97)';
+      card.style.pointerEvents = show ? '' : 'none';
+      card.style.transition = 'opacity 0.35s, transform 0.35s';
+    });
+  });
+});
+
+/* ---- Lightbox ---- */
+(function() {
+  const backdrop = document.getElementById('lbBackdrop');
+  const lbImg    = document.getElementById('lbImg');
+  const lbTag    = document.getElementById('lbTag');
+  const lbTitle  = document.getElementById('lbTitle');
+  const lbSub    = document.getElementById('lbSub');
+  const lbClose  = document.getElementById('lbClose');
+  const lbPrev   = document.getElementById('lbPrev');
+  const lbNext   = document.getElementById('lbNext');
+
+  let cards = [];
+  let activeIndex = 0;
+
+  function openLightbox(index) {
+    cards = Array.from(document.querySelectorAll('.g-card'));
+    activeIndex = index;
+    showSlide(activeIndex);
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function showSlide(i) {
+    const card = cards[i];
+    if (!card) return;
+    const img   = card.querySelector('img');
+    const tag   = card.querySelector('.g-tag');
+    const title = card.querySelector('.g-title');
+    const sub   = card.querySelector('.g-sub');
+    lbImg.src        = img   ? img.src   : '';
+    lbImg.alt        = img   ? img.alt   : '';
+    lbTag.textContent   = tag   ? tag.textContent   : '';
+    lbTitle.textContent = title ? title.textContent : '';
+    lbSub.textContent   = sub   ? sub.textContent   : '';
+    lbPrev.disabled = i === 0;
+    lbNext.disabled = i === cards.length - 1;
+    activeIndex = i;
+  }
+
+  // Attach click to cards (delegated, works after DOM ready)
+  document.addEventListener('click', function(e) {
+    const card = e.target.closest('.g-card');
+    if (card) {
+      cards = Array.from(document.querySelectorAll('.g-card'));
+      openLightbox(cards.indexOf(card));
+    }
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  backdrop.addEventListener('click', function(e) {
+    if (e.target === backdrop) closeLightbox();
+  });
+  lbPrev.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (activeIndex > 0) showSlide(activeIndex - 1);
+  });
+  lbNext.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (activeIndex < cards.length - 1) showSlide(activeIndex + 1);
+  });
+  document.addEventListener('keydown', function(e) {
+    if (!backdrop.classList.contains('open')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   { if (activeIndex > 0) showSlide(activeIndex - 1); }
+    if (e.key === 'ArrowRight')  { if (activeIndex < cards.length - 1) showSlide(activeIndex + 1); }
+  });
+})();
+
+/* ---- Horizontal Scroll Gallery ---- */
+(function() {
+  const track = document.getElementById('galleryTrack');
+  const btnLeft = document.getElementById('galleryLeft');
+  const btnRight = document.getElementById('galleryRight');
+  const counterEl = document.getElementById('currentSlide');
+  const dotsWrap = document.getElementById('galleryDots');
+  if (!track) return;
+
+  const total = 9;
+  let current = 0;
+
+  function visibleCount() {
+    return window.innerWidth <= 540 ? 1 : window.innerWidth <= 900 ? 2 : 4;
+  }
+
+  // Build dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'g-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  }
+
+  function goTo(index) {
+    const cards = track.querySelectorAll('.g-card');
+    if (!cards.length) return;
+    const gap = 19; // matches 1.2rem gap approx
+    const cardW = cards[0].offsetWidth + gap;
+    const maxIndex = Math.max(0, total - visibleCount());
+    current = Math.max(0, Math.min(index, maxIndex));
+    track.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+    counterEl.textContent = current + 1;
+    document.querySelectorAll('.g-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    btnLeft.disabled = current === 0;
+    btnRight.disabled = current >= maxIndex;
+  }
+
+  btnLeft.addEventListener('click', () => goTo(current - 1));
+  btnRight.addEventListener('click', () => goTo(current + 1));
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+  });
+
+  // Creative tabs filter (gallery version)
+  document.querySelectorAll('.creative-tabs .pf-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.creative-tabs .pf-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.cf;
+      document.querySelectorAll('.g-card').forEach(card => {
+        const show = filter === 'all' || card.dataset.cf === filter;
+        card.style.opacity = show ? '1' : '0.2';
+        card.style.pointerEvents = show ? '' : 'none';
+        card.style.transition = 'opacity 0.35s';
+      });
+      goTo(0);
+    });
+  });
+
+  window.addEventListener('resize', () => goTo(current));
+  goTo(0);
+})();
+
+/* ---- Contact form ---- */
+function handleForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+  setTimeout(() => {
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
+    btn.style.background = 'linear-gradient(135deg,#00c864,#00a0ff)';
+    document.getElementById('form-msg').style.display = 'block';
+    e.target.reset();
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+      btn.style.background = '';
+      document.getElementById('form-msg').style.display = 'none';
+    }, 4000);
+  }, 1500);
+}
+</script>
+</body>
+</html>
