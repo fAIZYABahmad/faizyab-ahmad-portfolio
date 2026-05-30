@@ -29,12 +29,13 @@
   --shadow:0 25px 60px rgba(0,0,40,0.5);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{
   font-family:'Plus Jakarta Sans',sans-serif;
   background:var(--navy);
   color:var(--white);
   overflow-x:hidden;
+  max-width:100%;
   line-height:1.6;
 }
 a{text-decoration:none;color:inherit}
@@ -70,6 +71,9 @@ nav{
   -webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
   transition:padding 0.3s;
+  width:100%;
+  box-sizing:border-box;
+  overflow:hidden;
 }
 nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
 .nav-logo{
@@ -128,6 +132,7 @@ nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
   padding:100px 5% 100px;
   position:relative;
   overflow:hidden;
+  width:100%;
 }
 /* animated mesh background */
 .hero-mesh{
@@ -152,6 +157,7 @@ nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
 .hero-inner{
   display:grid;grid-template-columns:1fr auto;
   gap:4rem;align-items:center;max-width:1200px;margin:0 auto;width:100%;
+  min-width:0;
 }
 .hero-left{}
 .hero-badge{
@@ -275,6 +281,14 @@ nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
 }
 .hero-float.f1{top:10%;right:-30px;animation-delay:0s}
 .hero-float.f2{bottom:18%;left:-30px;animation-delay:2.5s}
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-img-wrap{display:none;}
+  #home{overflow:hidden;padding:100px 5% 80px;width:100%;}
+  html,body{overflow-x:hidden;max-width:100vw;}
+  .orb{display:none;}
+  .hero-float{display:none;}
+}
 @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .float-ico{
   width:36px;height:36px;border-radius:0.6rem;
@@ -286,10 +300,15 @@ nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
 .float-sub{font-size:0.65rem;color:var(--muted)}
 /* scroll hint */
 .scroll-hint{
-  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:0.4rem;
   font-size:0.68rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;
   animation:fadeUp 1s 1.2s both;
+  z-index:1;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .scroll-hint{ display:none; }
 }
 .scroll-mouse{
   width:22px;height:34px;
@@ -305,8 +324,8 @@ nav.scrolled{padding:0.65rem 5%;box-shadow:0 4px 30px rgba(0,0,0,0.4)}
 /* ========================================
    SECTION SHARED
 ======================================== */
-section{position:relative;z-index:1}
-.container{max-width:1200px;margin:0 auto;padding:0 5%}
+section{position:relative;z-index:1;width:100%}
+.container{max-width:1200px;margin:0 auto;padding:0 5%;width:100%;box-sizing:border-box}
 .section-pad{padding:100px 0}
 .sec-tag{
   display:inline-flex;align-items:center;gap:0.6rem;
@@ -463,13 +482,16 @@ section{position:relative;z-index:1}
   font-size:0.82rem;font-weight:600;color:var(--blue-l);margin-bottom:1rem;
 }
 .t-company i{font-size:0.75rem}
-.t-bullets{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.t-bullets{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
 .t-bullets li{
-  font-size:0.85rem;color:var(--muted);line-height:1.6;
-  display:flex;gap:0.7rem;align-items:flex-start;
+  font-size:0.85rem;color:var(--muted);line-height:1.7;
+  padding-left:1.4rem;
+  position:relative;
 }
 .t-bullets li::before{
-  content:'▸';color:var(--cyan);flex-shrink:0;margin-top:0.05rem;font-size:0.75rem;
+  content:'▸';color:var(--cyan);
+  position:absolute;left:0;top:0.05em;
+  font-size:0.75rem;
 }
 .t-type{
   display:inline-block;
@@ -757,6 +779,12 @@ footer{
   .f-row{grid-template-columns:1fr}
   .cta-band{padding:2.5rem 1.5rem;border-radius:1.2rem}
   .section-pad{padding:70px 0}
+  .t-card{padding:1.2rem 1.2rem}
+  .t-bullets li{font-size:0.82rem}
+  .exp-layout{gap:2rem}
+  .timeline{padding-left:1.5rem}
+  .t-dot{left:-2.1rem}
+  nav,.mobile-menu,section,footer,div{max-width:100%;box-sizing:border-box}
 }
 
 /* ========================================
@@ -1086,7 +1114,7 @@ footer{
 /* ========================================
    DESIGN SERVICES IMAGE CARDS
 ======================================== */
-/* .dsrv-img-grid {
+.dsrv-img-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
@@ -1152,7 +1180,7 @@ footer{
 @media(max-width:600px)  { .dsrv-img-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
-<body> */
+<body>
 
 <!-- ====================================================
      NAVIGATION
@@ -1479,7 +1507,162 @@ footer{
 <!-- ====================================================
      SERVICES
 ==================================================== -->
+<section id="services" class="section-pad">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <p class="sec-tag">What I Offer</p>
+        <h2 class="sec-h rev">Services That <em>Create Value</em></h2>
+      </div>
+      <p class="sec-sub rev delay-2">From pharmaceutical procurement to AI-powered product photography — I deliver professional-grade results across every domain I work in.</p>
+    </div>
 
+    <!-- Row 1: Procurement + E-comm -->
+    <div class="services-grid" style="margin-bottom:1.2rem">
+      <div class="srv-card rev delay-1">
+        <div class="srv-ico blue"><i class="fa-solid fa-boxes-stacked" style="color:var(--blue-l)"></i></div>
+        <h3 class="srv-name">SAP MM Procurement</h3>
+        <p class="srv-desc">End-to-end P2P cycle management, vendor negotiations, cost optimisation, GDP compliance, and procurement analytics using SAP ERP systems.</p>
+      </div>
+      <div class="srv-card rev delay-2">
+        <div class="srv-ico cyan"><i class="fa-brands fa-amazon" style="color:var(--cyan)"></i></div>
+        <h3 class="srv-name">E-Commerce Consulting</h3>
+        <p class="srv-desc">Amazon &amp; eBay marketplace optimisation, product listing strategy, inventory workflow consulting, and client acquisition for international sellers.</p>
+      </div>
+      <div class="srv-card rev delay-3">
+        <div class="srv-ico blue"><i class="fa-solid fa-code" style="color:var(--blue-l)"></i></div>
+        <h3 class="srv-name">Frontend Web Development</h3>
+        <p class="srv-desc">Responsive, modern websites and landing pages built with HTML5, CSS3 &amp; Bootstrap 5. Mobile-first, performance-optimised, and visually polished.</p>
+      </div>
+    </div>
+
+    <!-- Creative Design Sub-Header -->
+    <div class="creative-sub-header rev">
+      <div class="creative-sub-line"></div>
+      <div class="creative-sub-inner">
+        <span class="creative-sub-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Creative & Visual Production</span>
+        <h3 class="creative-sub-h">Design Services</h3>
+        <p class="creative-sub-p">Pixel-perfect visuals that stop the scroll, build brands, and drive conversions.</p>
+      </div>
+      <div class="creative-sub-line"></div>
+    </div>
+
+    <!-- Design Services Image Cards -->
+    <div class="dsrv-img-grid">
+
+      <div class="dsrv-img-card rev delay-1">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/2100955/pexels-photo-2100955.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Portrait Retouching" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(77,143,255,0.2);color:var(--blue-l)"><i class="fa-solid fa-user-tie"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>Portrait & Editorial Retouching</h4>
+          <p>High-end Dodge &amp; Burn retouching for fashion, beauty, and personal brands — editorial-grade results every time.</p>
+          <div class="dsrv-img-tags"><span>Skin Retouching</span><span>Color Grading</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-2">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/3373736/pexels-photo-3373736.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="AI Product Photography" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(0,196,255,0.2);color:var(--cyan)"><i class="fa-solid fa-robot"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>AI Product Photography</h4>
+          <p>Photorealistic lifestyle scenes and Amazon A+ visuals — studio-quality results without the studio cost.</p>
+          <div class="dsrv-img-tags"><span>Amazon A+</span><span>Campaign Visuals</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-3">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="eCommerce Visual Production" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(255,209,102,0.15);color:var(--accent)"><i class="fa-solid fa-store"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>eCommerce Visual Production</h4>
+          <p>Full post-production sets for Amazon &amp; Shopify — product images, infographics, and lifestyle shots built for conversion.</p>
+          <div class="dsrv-img-tags"><span>Amazon</span><span>Shopify</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-1">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Photorealistic Enhancement" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(26,111,255,0.2);color:var(--blue-l)"><i class="fa-solid fa-wand-sparkles"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>Photorealistic Enhancement</h4>
+          <p>Background replacement, compositing, light &amp; shadow correction — seamless manipulations that look completely real.</p>
+          <div class="dsrv-img-tags"><span>Compositing</span><span>Realism</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-2">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/6444/pexels-photo-6444.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Creative Direction" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(255,80,80,0.15);color:#ff7070"><i class="fa-solid fa-chess-king"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>Creative Direction & Visual Strategy</h4>
+          <p>Visual language, mood boards, colour systems, and style guides — brand-focused direction that attracts premium audiences.</p>
+          <div class="dsrv-img-tags"><span>Brand Identity</span><span>Style Guides</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-3">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/3585088/pexels-photo-3585088.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="AI Video Social Media" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(200,100,255,0.15);color:#c878ff"><i class="fa-solid fa-film"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>AI Video for Social Media</h4>
+          <p>AI-generated Reels, TikToks, and Facebook Ads — scroll-stopping motion content engineered for engagement.</p>
+          <div class="dsrv-img-tags"><span>Reels</span><span>TikTok</span><span>Facebook Ads</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-2">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/3498905/pexels-photo-3498905.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Product Image Sets" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(0,196,255,0.2);color:var(--cyan)"><i class="fa-solid fa-layer-group"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>Consistent Product Image Sets</h4>
+          <p>Scalable batch imagery with uniform lighting, backgrounds, and styling across entire catalogues for brand cohesion.</p>
+          <div class="dsrv-img-tags"><span>Batch Production</span><span>Scalable</span></div>
+        </div>
+      </div>
+
+      <div class="dsrv-img-card rev delay-3">
+        <div class="dsrv-img-top">
+          <img src="https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&dpr=1" alt="Marketing Creatives" loading="lazy"/>
+          <div class="dsrv-img-overlay">
+            <span class="dsrv-img-icon" style="background:rgba(255,209,102,0.15);color:var(--accent)"><i class="fa-solid fa-fire-flame-curved"></i></span>
+          </div>
+        </div>
+        <div class="dsrv-img-body">
+          <h4>Premium Marketing Creatives</h4>
+          <p>High-conversion static ads, carousels, and banner sets engineered to maximise ROAS across every paid platform.</p>
+          <div class="dsrv-img-tags"><span>Paid Ads</span><span>ROAS Focused</span></div>
+        </div>
+      </div>
+
+    </div>
 
     <!-- CTA Band -->
     <div class="cta-band rev">
@@ -1568,12 +1751,21 @@ footer{
           </div>
 
           <!-- CARD 3 — Xiaomi Phone Ad -->
-          
+          <div class="g-card" data-cf="product">
+            <div class="g-img-wrap">
+              <img src="PHONE AD 2.jpg" alt="Xiaomi 17 Pro Ad"/>
+            </div>
+            <div class="g-overlay">
+              <div class="g-tag">AI Product Photography</div>
+              <h4 class="g-title">Xiaomi 17 Pro — Tech Campaign Visual</h4>
+              <p class="g-sub">Feature Callouts · Campaign Ready · Lifestyle Composite</p>
+            </div>
+          </div>
 
           <!-- CARD 4 — OPPO Phone Ad -->
           <div class="g-card" data-cf="product">
             <div class="g-img-wrap">
-              <img src="PHONE AD 2.jpg" alt="OPPO Find X9 Ultra Ad"/>
+              <img src="phone AD.jpg" alt="OPPO Find X9 Ultra Ad"/>
             </div>
             <div class="g-overlay">
               <div class="g-tag">Premium Marketing Creative</div>
@@ -1597,7 +1789,7 @@ footer{
           <!-- CARD 6 — Spring Water Ad -->
           <div class="g-card" data-cf="product">
             <div class="g-img-wrap">
-              <img src="water AD.jpg" alt="Spring Water Ad"/>
+              <img src="water_AD.jpg" alt="Spring Water Ad"/>
             </div>
             <div class="g-overlay">
               <div class="g-tag">AI Product Photography</div>
@@ -1609,7 +1801,7 @@ footer{
           <!-- CARD 7 — Arctic Pulse Energy Drink -->
           <div class="g-card" data-cf="ads">
             <div class="g-img-wrap">
-              <img src="Energy drink AD.jpg" alt="Arctic Pulse Energy Drink Ad"/>
+              <img src="Energy_drink_AD.jpg" alt="Arctic Pulse Energy Drink Ad"/>
             </div>
             <div class="g-overlay">
               <div class="g-tag">High-Impact Marketing Creative</div>
@@ -1621,7 +1813,7 @@ footer{
           <!-- CARD 8 — Matcha Café UI -->
           <div class="g-card" data-cf="social">
             <div class="g-img-wrap">
-              <img src="matcha AD.jpg" alt="Matcha Latte Café UI"/>
+              <img src="matcha_AD.jpg" alt="Matcha Latte Café UI"/>
             </div>
             <div class="g-overlay">
               <div class="g-tag">UI Design & Social Media Creative</div>
@@ -1633,7 +1825,7 @@ footer{
           <!-- CARD 9 — Placeholder for future work -->
           <div class="g-card" data-cf="ecom">
             <div class="g-img-wrap">
-              <img src="meigen2.jpg" alt="Product Photography Set"/>
+              <img src="4_IN_1.jpg" alt="Product Photography Set"/>
             </div>
             <div class="g-overlay">
               <div class="g-tag">Consistent Product Image Sets</div>
