@@ -23,6 +23,7 @@ body{
   color:var(--ink);
   font-family:'Inter',sans-serif;
   line-height:1.6;
+  cursor:none;
 }
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
 a{color:inherit;text-decoration:none;}
@@ -142,15 +143,39 @@ section{padding:64px 0;border-top:1px solid var(--ink);}
 
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);border:1px solid var(--ink);}
 .gallery-card{background:var(--paper);display:flex;flex-direction:column;}
-.gallery-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--ink);}
-.gallery-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
-.gallery-card:hover .gallery-media img{transform:scale(1.05);}
-.gallery-cat{position:absolute;top:10px;left:10px;background:var(--paper);border:1px solid var(--ink);font-family:'Space Grotesk',sans-serif;font-size:9.5px;text-transform:uppercase;letter-spacing:0.07em;padding:4px 9px;}
+.gallery-media{position:relative;height:300px;overflow:hidden;background:var(--paper);cursor:none;display:flex;align-items:center;justify-content:center;}
+.gallery-media img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .5s ease;}
+.gallery-card:hover .gallery-media img{transform:scale(1.03);}
+.gallery-cat{position:absolute;top:10px;left:10px;background:var(--paper);border:1px solid var(--ink);font-family:'Space Grotesk',sans-serif;font-size:9.5px;text-transform:uppercase;letter-spacing:0.07em;padding:4px 9px;pointer-events:none;}
 .gallery-body{padding:18px 20px 22px;}
 .gallery-body h3{font-family:'Space Grotesk',sans-serif;font-size:15px;margin-bottom:6px;}
 .gallery-body p{color:var(--grey);font-size:12.5px;text-transform:uppercase;letter-spacing:0.04em;}
 @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.gallery-grid{grid-template-columns:1fr;}}
+
+/* custom cursor — small dot only */
+#cursor-dot{
+  position:fixed;top:0;left:0;border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%) scale(0);
+  opacity:0;
+  width:7px;height:7px;background:var(--ink);
+  transition:opacity .2s ease, transform .2s ease, background .2s ease, width .15s ease, height .15s ease;
+}
+#cursor-dot.active{transform:translate(-50%,-50%) scale(1);opacity:1;}
+#cursor-dot.grow{background:var(--red);width:12px;height:12px;}
+@media(max-width:900px){#cursor-dot{display:none;}body{cursor:auto;}.gallery-media{cursor:pointer;}}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(21,19,15,0.94);z-index:200;display:flex;align-items:center;justify-content:center;padding:40px 20px;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+.lightbox.open{opacity:1;pointer-events:auto;}
+.lightbox-inner{max-width:900px;width:100%;}
+.lightbox img{width:100%;max-height:76vh;object-fit:contain;display:block;border:1px solid #3A362C;}
+.lightbox-caption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px;color:var(--paper);flex-wrap:wrap;}
+.lightbox-caption h3{font-family:'Space Grotesk',sans-serif;font-size:16px;}
+.lightbox-caption p{color:#B7AF9C;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;}
+.lightbox-close{position:fixed;top:26px;right:32px;font-family:'Space Grotesk',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--paper);border:1px solid #3A362C;padding:9px 16px;cursor:pointer;background:transparent;z-index:201;}
+.lightbox-close:hover{background:var(--red);border-color:var(--red);}
 
 /* EDUCATION */
 .edu-list{border-top:1px solid var(--ink);}
@@ -381,39 +406,39 @@ footer{background:var(--ink);color:#8A8471;text-align:center;padding:20px 0;font
 
     <div class="gallery-grid">
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">Fashion &amp; Apparel</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/SHIRTS%20AD.jpg" alt="Premium T-Shirt Campaign — A&H Brand" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">Fashion &amp; Apparel</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/SHIRTS%20AD.jpg" alt="Premium T-Shirt Campaign — A&H Brand" loading="lazy"></div>
         <div class="gallery-body"><h3>Premium T-Shirt Campaign — A&amp;H Brand</h3><p>Print Ad · Editorial Layout</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">eCommerce Visuals</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/meigen2.jpg" alt="Luxury Multi-Product Set — Beauty & Lifestyle" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">eCommerce Visuals</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/meigen2.jpg" alt="Luxury Multi-Product Set — Beauty & Lifestyle" loading="lazy"></div>
         <div class="gallery-body"><h3>Luxury Multi-Product Set — Beauty &amp; Lifestyle</h3><p>Amazon A+ · Lifestyle Photography</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">AI Product</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/PHONE%20AD%202.jpg" alt="Xiaomi 17 Pro — Tech Campaign Visual" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">AI Product</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/PHONE%20AD%202.jpg" alt="Xiaomi 17 Pro — Tech Campaign Visual" loading="lazy"></div>
         <div class="gallery-body"><h3>Xiaomi 17 Pro — Tech Campaign Visual</h3><p>Feature Callouts · Lifestyle Composite</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">Marketing Ads</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/phone%20AD.jpg" alt="OPPO Find X9 Ultra — Editorial Dark Campaign" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">Marketing Ads</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/phone%20AD.jpg" alt="OPPO Find X9 Ultra — Editorial Dark Campaign" loading="lazy"></div>
         <div class="gallery-body"><h3>OPPO Find X9 Ultra — Editorial Dark Campaign</h3><p>Cinematic · Paid Social Ready</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">Brand Identity</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/torch.jpg" alt="Torch — Logo & Brand Mark Design" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">Brand Identity</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/torch.jpg" alt="Torch — Logo & Brand Mark Design" loading="lazy"></div>
         <div class="gallery-body"><h3>Torch — Logo &amp; Brand Mark Design</h3><p>Typography · Minimalist Identity</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">AI Product</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/water%20AD.jpg" alt="Spring Mineral Water — Campaign Visual" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">AI Product</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/water%20AD.jpg" alt="Spring Mineral Water — Campaign Visual" loading="lazy"></div>
         <div class="gallery-body"><h3>Spring Mineral Water — Campaign Visual</h3><p>AI-Generated · Splash Composite</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">Marketing Ads</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/Energy%20drink%20AD.jpg" alt="Arctic Pulse Energy Drink — Full Ad Campaign" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">Marketing Ads</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/Energy%20drink%20AD.jpg" alt="Arctic Pulse Energy Drink — Full Ad Campaign" loading="lazy"></div>
         <div class="gallery-body"><h3>Arctic Pulse Energy Drink — Ad Campaign</h3><p>Facebook Ad · Neon Visual</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">Social Media</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/matcha%20AD.jpg" alt="Moss Café — Matcha Latte Landing Page Design" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">Social Media</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/matcha%20AD.jpg" alt="Moss Café — Matcha Latte Landing Page Design" loading="lazy"></div>
         <div class="gallery-body"><h3>Moss Café — Matcha Latte Landing Page</h3><p>Web UI · Brand Visual</p></div>
       </div>
       <div class="gallery-card reveal">
-        <div class="gallery-media"><span class="gallery-cat">eCommerce Visuals</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/4%20IN%201.jpg" alt="Full Catalogue Set — Lifestyle & Beauty eCommerce" loading="lazy"></div>
+        <div class="gallery-media lightbox-trigger" role="button" tabindex="0"><span class="gallery-cat">eCommerce Visuals</span><img src="https://faizyabahmad.github.io/faizyab-ahmad-portfolio/4%20IN%201.jpg" alt="Full Catalogue Set — Lifestyle & Beauty eCommerce" loading="lazy"></div>
         <div class="gallery-body"><h3>Full Catalogue Set — Lifestyle &amp; Beauty</h3><p>Scalable · Multi-SKU Delivered</p></div>
       </div>
     </div>
@@ -451,6 +476,19 @@ footer{background:var(--ink);color:#8A8471;text-align:center;padding:20px 0;font
 
 <footer>Islamabad, Pakistan · © 2026 Faizyab Ahmad</footer>
 
+<div id="cursor-dot"></div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">Close ✕</button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxMeta"></p>
+    </div>
+  </div>
+</div>
+
 <script>
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
@@ -459,6 +497,60 @@ footer{background:var(--ink);color:#8A8471;text-align:center;padding:20px 0;font
     });
   }, {threshold:0.1});
   revealEls.forEach(el=>io.observe(el));
+
+  /* custom cursor — dot follows instantly, ring trails smoothly behind */
+  const cursorDot = document.getElementById('cursor-dot');
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const hoverables = document.querySelectorAll('a, button, .gallery-media, .proj-card');
+
+  document.addEventListener('mousemove', (e)=>{
+    cursorDot.style.left = e.clientX + 'px';
+    cursorDot.style.top = e.clientY + 'px';
+    cursorDot.classList.add('active');
+  });
+  document.addEventListener('mouseleave', ()=>{
+    cursorDot.classList.remove('active');
+  });
+
+  hoverables.forEach(el=>{
+    el.addEventListener('mouseenter', ()=> cursorDot.classList.add('grow'));
+    el.addEventListener('mouseleave', ()=> cursorDot.classList.remove('grow'));
+  });
+
+  /* lightbox: click or press Enter/Space on an image to pop it up */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxMeta = document.getElementById('lightboxMeta');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(trigger){
+    const img = trigger.querySelector('img');
+    const body = trigger.closest('.gallery-card').querySelector('.gallery-body');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxTitle.textContent = body.querySelector('h3').textContent;
+    lightboxMeta.textContent = body.querySelector('p').textContent;
+    lightbox.classList.add('open');
+    cursorDot.classList.remove('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach(t=>{
+    t.addEventListener('click', ()=> openLightbox(t));
+    t.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openLightbox(t); }
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>
